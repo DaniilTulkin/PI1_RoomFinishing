@@ -1,0 +1,55 @@
+﻿<Window x:Class="PI1_RoomFinishing.UserControlFloors"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PI1_RoomFinishing"
+             mc:Ignorable="d" 
+             Title="Отделка пола"
+             SizeToContent="Height"
+             Width="300">
+    
+    <StackPanel>
+
+        <GroupBox Header="Настройки пола" Padding="5">
+            <StackPanel>
+
+                <CheckBox x:Name="chbFloor" Content="Генерировать пол"
+                          IsChecked="True" Margin="5" />
+
+                <TextBlock Text="Тип пола" Margin="5" />
+                <ComboBox x:Name="cmbFloorTypes" Margin="5"
+                          ItemsSource="{Binding FloorTypesList}"
+                          DisplayMemberPath="Name"
+                          SelectionChanged="cmbFloorTypes_SelectionChanged" />              
+                
+            </StackPanel>            
+        </GroupBox>
+
+        <GroupBox Header="Настройки плинтуса" Padding="5">
+            <StackPanel>
+                
+                <CheckBox x:Name="chbPlinth" Content="Генерировать плинтус"
+                          IsChecked="False" Margin="5"/>
+
+                <TextBlock Text="Тип плинтуса" Margin="5" />
+                <ComboBox x:Name="cmbPlinthTypes" Margin="5"
+                          ItemsSource="{Binding PlinthTypesList}"
+                          DisplayMemberPath="Name"
+                          SelectionChanged="cmbPlinthTypes_SelectionChanged" />
+
+            </StackPanel>
+        </GroupBox>
+        
+        <TextBlock Text="Смещение от уровня" Margin="5" />
+        <TextBox x:Name="txtbLevelOffset" Margin="5"
+                         Padding="3" Text="0,000"
+                         PreviewTextInput="PreviewTextInputNumber"
+                         TextChanged="txtbLevelOffset_TextChanged" />
+        
+        <Button x:Name="btnOK" Content="OK" Margin="5, 5, 5, 10"
+                Width="80" Click="btnOK_Click" />
+
+    </StackPanel>
+    
+</Window>

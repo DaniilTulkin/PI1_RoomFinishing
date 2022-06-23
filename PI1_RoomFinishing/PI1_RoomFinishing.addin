@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>PI1_RoomFinishing</Name>
+		<Assembly>PI1_RoomFinishing.dll</Assembly>
+		<AddInId>5C1ED9F2-A952-48BD-88C6-67B813E2926A</AddInId>
+		<FullClassName>PI1_RoomFinishing.Main</FullClassName>
+		<VendorId>Daniil Tulkin</VendorId>
+		<VendorDescription>Daniil Tulkin</VendorDescription>
+	</AddIn>
+</RevitAddIns>
